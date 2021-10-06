@@ -30,6 +30,8 @@ mongoose.connect(process.env.API,{
 app.get('/',(req,res)=>{
     res.send('Welcome');
 })
+app.use('/auth',require('./routes/user.route'))
+
 
 // Event listener for http server 
 app.listen(port,()=>{
