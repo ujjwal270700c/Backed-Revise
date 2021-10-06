@@ -9,5 +9,6 @@ router.route('/ByUser').get(protect,getAllListByUser)
 router.route('/:id').get(protect,getTodoById)
 router.route('/:id').put(protect,updateById)
 router.route('/:id').delete(protect,deleteById)
+router.route('/').get(filterByTitleAndCategory)
 
 module.exports =router
